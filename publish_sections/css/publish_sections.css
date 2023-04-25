@@ -1,0 +1,78 @@
+/* before js render */
+fieldset .publish-sections-field {
+	
+    position: relative;
+    z-index: 2;
+	margin-top: -36px;
+    margin-left: -28px;
+    margin-right: -28px;
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+fieldset .publish-sections-field.has-instructions {
+	margin-top: -48px;
+}
+
+/* after js render */
+.publish-sections-field {
+	display: flex;
+	align-items: center;
+	margin: 0px -13px 50px -13px;
+	padding-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-size: 14px;
+	
+	padding: 0 3px 0;
+	background: none;
+	border-radius: none !important;
+}
+.publish-sections-field h3 {
+	align-self: normal;
+	color: var(--ee-bg-blank);
+	background: var(--ee-bg-25);
+	font-weight: normal;
+	margin: 0;
+	color: #fff;
+	border: none;
+	white-space: nowrap;
+	
+	border-radius: 0;
+	padding: 5px 32px 5px;
+	font-size: 16px;
+}
+.publish-sections-field h3.light {
+	color: var(--ee-text-normal);
+}
+.publish-sections-field h3 .fal {
+	margin-left: -0.5em;
+	margin-right: 0.25em;
+	color: inherit;
+}
+.publish-sections-field p {
+	margin-left: 1em;
+	color: var(--ee-text-secondary);
+}
+
+.publish-sections-field.medium h3, .publish-sections-field.large h3 {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.publish-sections-field.medium {
+	padding: 50px 20px 0;
+	background: var(--ee-main-bg);
+}
+.publish-sections-field.medium h3 {
+	padding: 6px 22px 6px;
+	font-size: 18px;
+}
+
+.publish-sections-field.large {
+	padding: 70px 20px 0;
+	background: var(--ee-main-bg);
+}
+.publish-sections-field.large h3 {
+	padding: 12px 32px 12px;
+	font-size: 20px;
+}
