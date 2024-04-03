@@ -22,9 +22,21 @@ Find Publish Sections and click Install.
 ## Setup ##
 
 Create a field with the Publish Section fieldtype.
-Select a display style and an icon to go with it.
+Select a display style and an icon to go with it from the field settings.
+Optionally make the section collapsible from within the field settings.
 Add the field to your channel.
 Go to the channel layout and position the section where you'd like to appear.
 
 ## Tip ##
 To differentiate the field from other fields, you may prefix the field name with a one (or more) dashes. The dashes would be removed from the publish view.
+
+
+## Changelog ##
+
+1.0.0 
+- Release
+
+1.2.0
+- Added color picker to field settings
+- Added option to collapse fields within (below) the section
+- Cleaned up by removing javascript DOM restructuring

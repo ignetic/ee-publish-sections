@@ -1,31 +1,28 @@
-/* before js render */
+/* Publish Sections css */
 fieldset .publish-sections-field {
-	
-    position: relative;
-    z-index: 2;
-	margin-top: -36px;
-    margin-left: -28px;
-    margin-right: -28px;
-    margin-bottom: 20px;
-    border-radius: 0;
+	position: relative;
+	z-index: 2;
+	/*margin-left: -28px;
+	margin-right: -28px;
+	margin-bottom: 20px;*/
+	margin: 0 -28px 20px -28px;
+	border-radius: 0;
 }
-fieldset .publish-sections-field.has-instructions {
-	margin-top: -48px;
-}
-
-/* after js render */
 .publish-sections-field {
 	display: flex;
 	align-items: center;
-	margin: 0px -13px 50px -13px;
+	/*margin: 0px -13px 50px -13px;*/
 	padding-bottom: 0;
-	border-left: 0;
-	border-right: 0;
 	font-size: 14px;
-	
+
 	padding: 0 3px 0;
 	background: none;
-	border-radius: none !important;
+	border-radius: 0 !important;
+
+	border-left: 0;
+	border-right: 0;
+	border-top: 1px solid var(--ee-panel-border);
+	border-bottom: 1px solid var(--ee-panel-border);
 }
 .publish-sections-field h3 {
 	align-self: normal;
@@ -36,7 +33,6 @@ fieldset .publish-sections-field.has-instructions {
 	color: #fff;
 	border: none;
 	white-space: nowrap;
-	
 	border-radius: 0;
 	padding: 5px 32px 5px;
 	font-size: 16px;
@@ -49,23 +45,28 @@ fieldset .publish-sections-field.has-instructions {
 	margin-right: 0.25em;
 	color: inherit;
 }
+.publish-sections-field h3 .expand-icon {
+	font-size: 60%;
+	margin-left: 5px;
+	margin-right: -10px;
+	opacity: 0.7;
+	visibility: hidden;
+}
 .publish-sections-field p {
 	margin-left: 1em;
 	color: var(--ee-text-secondary);
 }
-
 .publish-sections-field.medium h3, .publish-sections-field.large h3 {
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 }
-
 .publish-sections-field.medium {
-	padding: 50px 20px 0;
+	padding: 40px 20px 0;
 	background: var(--ee-main-bg);
 }
 .publish-sections-field.medium h3 {
 	padding: 6px 22px 6px;
-	font-size: 18px;
+	font-size: 17px;
 }
 
 .publish-sections-field.large {
@@ -75,4 +76,47 @@ fieldset .publish-sections-field.has-instructions {
 .publish-sections-field.large h3 {
 	padding: 12px 32px 12px;
 	font-size: 20px;
+}
+@media (max-width: 767px) {
+	.publish-sections-field.medium h3 {
+		padding: 8px 18px 8px;
+		font-size: 15px;
+	}
+	.publish-sections-field.large h3 {
+		padding: 12px 24px 12px;
+		font-size: 17px;
+	}
+}
+.publish-sections-field .expand-btn {
+	cursor: pointer;
+}
+.publish-sections-field .publish-section-expand-btn {
+	position: absolute;
+	right: 10px;
+}
+.publish-section-note {
+	position: absolute;
+	bottom: -37px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	color: var(--ee-text-secondary);
+	opacity: 0.4;
+}
+.publish-section-note:hover {
+	opacity: 1;
+}
+
+/* js loaded */
+.publish-sections-fieldset.collapsible .publish-sections-field {
+	padding-right: 60px;
+}
+.publish-sections-fieldset.collapsible .expand-icon {
+	visibility: visible;
+}
+.publish-sections-fieldset.collapsed .expand-icon:before {
+	content: "\f078";
+}
+.publish-sections-fieldset.collapsed .publish-section-note {
+	display: block;
 }
